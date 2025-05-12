@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-web-monitoring-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-web-monitoring-app
+  template:
+    metadata:
+      labels:
+        app: simple-web-monitoring-app
+    spec:
+      containers:
+      - name: simple-web-monitoring-app
+        image: srii0305/simple-web-monitoring-app:latest
+        ports:
+        - containerPort: 8080
