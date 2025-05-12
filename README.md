@@ -49,15 +49,13 @@ Build the Docker Image:
 Inside the project directory, build the Docker image using the provided Dockerfile:
 
 bash
-Copy
-Edit
+
 docker build -t simple-web-monitoring-app .
 Run the Docker Container Locally:
 Run the Docker container to verify that the application works locally:
 
 bash
-Copy
-Edit
+
 docker run -p 8080:8080 simple-web-monitoring-app
 You should be able to access the app at http://localhost:8080.
 
@@ -69,30 +67,26 @@ Authenticate kubectl:
 Once your cluster is created, authenticate the Kubernetes CLI to interact with your cluster:
 
 bash
-Copy
-Edit
+
 gcloud container clusters get-credentials sit737-cluster --region australia-southeast1
 Deploy the Application:
 Apply the Kubernetes manifest files to deploy the application:
 
 bash
-Copy
-Edit
+
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 Verify the Deployment:
 Check that the Pods are running successfully:
 
 bash
-Copy
-Edit
+
 kubectl get pods
 Access the Application:
 Once the service is exposed, you can access the application externally:
 
 bash
-Copy
-Edit
+
 kubectl get services
 Use the external IP to access the application.
 
@@ -123,14 +117,12 @@ Troubleshooting
 Pods Not Starting: Check the pod logs for errors:
 
 bash
-Copy
-Edit
+
 kubectl logs <pod-name>
 GKE Issues: If the cluster is not responding, check the status of your nodes:
 
 bash
-Copy
-Edit
+
 kubectl get nodes
 Challenges and Solutions
 Kubernetes Resource Management:
@@ -158,8 +150,7 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 yaml
-Copy
-Edit
+
 
 ---
 
